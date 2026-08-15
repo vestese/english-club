@@ -43,7 +43,7 @@ DATA_FILE = BASE_DIR / 'qserver_data.json'
 DB_FILE = BASE_DIR / 'vocabulaire_anglais.db'
 
 app = Flask(__name__, static_folder='.', static_url_path='')
-socketio = SocketIO(app, cors_allowed_origins='*', async_mode='eventlet')
+socketio = SocketIO(app, cors_allowed_origins='*', async_mode='gevent')
 
 # ---------------------------------------------------------------------------
 # État en mémoire (source de vérité) + verrou pour les accès concurrents
