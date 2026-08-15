@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Espace d'Apprentissage — Club Anglais Accra</title>
+  <meta name="description" content="Centre d'apprentissage d'anglais du Club Anglais Accra : vocabulaire, prononciation, grammaire et leçons PDF." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <!-- Topbar avec navigation -->
+    <div class="topbar">
+      <div class="logo" id="logo" title="Accueil" style="cursor:pointer" onclick="location.href='index.html'">
+        <span class="flag">🇬🇭</span> <span>Accra English Club</span>
+      </div>
+      <div class="spacer"></div>
+      <nav class="toplinks">
+        <a href="learning.html" class="toplink" style="color:var(--brand); font-weight:700;">Learning Hub</a>
+        <a href="index.html#play" class="toplink">Jouer en groupe</a>
+        <a href="index.html#manage" class="toplink">Gérer le contenu</a>
+      </nav>
+      <button class="btn-back" id="backBtn" onclick="location.href='index.html'">← Retour</button>
+    </div>
+
+    <!-- Hero Header -->
+    <div class="learning-hero">
+      <h1>📚 Espace d'Apprentissage</h1>
+      <p class="section-sub">Enrichissez votre vocabulaire, maîtrisez la prononciation, explorez la grammaire et révisez les leçons du club.</p>
+      
+      <div class="learning-stats" id="learningStats">
+        <div class="stat-pill">🔤 Mots : <strong id="statVocab">650+</strong></div>
+        <div class="stat-pill">🗣️ Pièges oral : <strong id="statPron">100+</strong></div>
+        <div class="stat-pill">⚡ Phrasal Verbs : <strong id="statPhrasal">50+</strong></div>
+        <div class="stat-pill">🔄 Verbes Irréguliers : <strong id="statIrregular">60+</strong></div>
+        <div class="stat-pill">🧩 Exercices : <strong id="statGrammar">40+</strong></div>
+      </div>
+    </div>
+
+    <!-- Barre d'onglets principaux -->
+    <nav class="learning-tabs-nav" id="tabsNav">
+      <button class="tab-btn active" data-tab="vocab">
+        <span>🔤</span> Vocabulaire <span class="tab-badge" id="badgeVocab">0</span>
+      </button>
+      <button class="tab-btn" data-tab="pron">
+        <span>🗣️</span> Prononciation <span class="tab-badge" id="badgePron">0</span>
+      </button>
+      <button class="tab-btn" data-tab="phrasal">
+        <span>⚡</span> Phrasal Verbs <span class="tab-badge" id="badgePhrasal">0</span>
+      </button>
+      <button class="tab-btn" data-tab="irregular">
+        <span>🔄</span> Verbes Irréguliers <span class="tab-badge" id="badgeIrregular">0</span>
+      </button>
+      <button class="tab-btn" data-tab="grammar">
+        <span>🧩</span> Grammaire <span class="tab-badge" id="badgeGrammar">0</span>
+      </button>
+      <button class="tab-btn" data-tab="lessons">
+        <span>📄</span> Leçons PDF <span class="tab-badge" id="badgeLessons">0</span>
+      </button>
+    </nav>
+
+    <!-- TAB 1: VOCABULAIRE -->
+    <section class="tab-panel" id="panel-vocab">
+      <div class="learning-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="vocabSearch" placeholder="Rechercher un mot en anglais ou français..." />
+        </div>
+        <select id="vocabCatFilter" class="filter-select">
+          <option value="">Toutes les catégories</option>
+        </select>
+        <select id="vocabLevelFilter" class="filter-select">
+          <option value="">Tous les niveaux</option>
+          <option value="beginner">Débutant</option>
+          <option value="easy">Facile</option>
+          <option value="medium">Moyen</option>
+        </select>
+      </div>
+
+      <div class="vocab-grid" id="vocabGrid">
+        <!-- Rendu dynamique JS -->
+      </div>
+    </section>
+
+    <!-- TAB 2: PRONONCIATION -->
+    <section class="tab-panel" id="panel-pron" style="display: none;">
+      <div class="learning-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="pronSearch" placeholder="Rechercher un mot ou un son..." />
+        </div>
+        <select id="pronTrapFilter" class="filter-select">
+          <option value="">Tous les pièges phonétiques</option>
+          <option value="silent letter">Lettres muettes</option>
+          <option value="-ough">-ough nightmare</option>
+          <option value="th sound">Sons TH</option>
+          <option value="stress">Accent tonique</option>
+        </select>
+      </div>
+
+      <div class="pron-grid" id="pronGrid">
+        <!-- Rendu dynamique JS -->
+      </div>
+    </section>
+
+    <!-- TAB 3: PHRASAL VERBS -->
+    <section class="tab-panel" id="panel-phrasal" style="display: none;">
+      <div class="learning-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="phrasalSearch" placeholder="Rechercher un Phrasal Verb (ex: give up, turn on)..." />
+        </div>
+      </div>
+
+      <div class="phrasal-grid" id="phrasalGrid">
+        <!-- Rendu dynamique JS -->
+      </div>
+    </section>
+
+    <!-- TAB 4: VERBES IRRÉGULIERS -->
+    <section class="tab-panel" id="panel-irregular" style="display: none;">
+      <div class="learning-controls irregular-header-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="irregularSearch" placeholder="Rechercher un verbe (ex: go, eat, break)..." />
+        </div>
+        <label class="test-mode-toggle">
+          <input type="checkbox" id="testModeCheck" />
+          <span>🔒 Mode Auto-Évaluation (Formes cachées)</span>
+        </label>
+      </div>
+
+      <div class="irregular-grid" id="irregularGrid">
+        <!-- Rendu dynamique JS -->
+      </div>
+    </section>
+
+    <!-- TAB 5: GRAMMAIRE INTERACTIVE -->
+    <section class="tab-panel" id="panel-grammar" style="display: none;">
+      <div class="learning-controls">
+        <select id="grammarCatFilter" class="filter-select">
+          <option value="">Toutes les notions de grammaire</option>
+        </select>
+        <button class="btn btn-ghost" id="resetGrammarBtn">🔄 Réinitialiser les réponses</button>
+      </div>
+
+      <div class="grammar-container" id="grammarContainer">
+        <!-- Rendu dynamique JS -->
+      </div>
+    </section>
+
+    <!-- TAB 6: LEÇONS PDF -->
+    <section class="tab-panel" id="panel-lessons" style="display: none;">
+      <div class="lessons-layout">
+        <div class="upload-card">
+          <span class="upload-icon">📄</span>
+          <h3>Ajouter un cours (PDF)</h3>
+          <p>Téléversez une fiche de cours ou un document PDF pour les membres du club.</p>
+          
+          <form id="uploadForm" class="upload-form-group">
+            <div>
+              <label for="lessonTitle">Titre du document :</label>
+              <input type="text" id="lessonTitle" name="title" placeholder="Ex: Fiche Grammaire - Les Temps" required />
+            </div>
+            <div>
+              <label for="lessonFile">Fichier PDF :</label>
+              <input type="file" id="lessonFile" name="file" accept="application/pdf" required />
+            </div>
+            <button type="submit" class="btn btn-primary mt">📤 Téléverser la leçon</button>
+          </form>
+          <div class="upload-status" id="uploadStatus"></div>
+        </div>
+
+        <div class="lessons-list-card">
+          <h3>📂 Leçons disponibles</h3>
+          <div class="lessons-grid" id="lessonsGrid">
+            <!-- Rendu dynamique JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="content/content.js"></script>
+  <script src="js/learning.js"></script>
+</body>
+
+</html>

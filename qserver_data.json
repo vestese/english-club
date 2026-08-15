@@ -1,0 +1,1975 @@
+{
+  "rooms": {
+    "BQSCW": {
+      "code": "BQSCW",
+      "createdAt": "2026-08-08T23:38:15.917729Z",
+      "updatedAt": "2026-08-08T23:40:22.494057Z",
+      "hostName": "steve",
+      "hostEmail": "kaboesteven@gmail.com",
+      "teams": [
+        {
+          "name": "Team A"
+        },
+        {
+          "name": "Team B"
+        }
+      ],
+      "players": [
+        {
+          "name": "steve",
+          "email": "kaboesteven@gmail.com",
+          "team": "Team A",
+          "joinedAt": "2026-08-08T23:38:15.917729Z"
+        },
+        {
+          "name": "Steven",
+          "email": "kaboesteven@gmail.com",
+          "team": "Team A",
+          "joinedAt": "2026-08-08T23:39:54.521040Z"
+        }
+      ],
+      "currentGame": "multiplayerWordChain"
+    },
+    "AHHNJ": {
+      "code": "AHHNJ",
+      "createdAt": "2026-08-09T02:01:06.428060Z",
+      "updatedAt": "2026-08-09T02:01:22.798455Z",
+      "hostName": "steve",
+      "hostEmail": "hh",
+      "teams": [
+        {
+          "name": "Team A"
+        },
+        {
+          "name": "Team B"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [
+        {
+          "id": "s4uk38i6kg",
+          "name": "steve",
+          "email": "hh",
+          "team": "Team A",
+          "role": "leader",
+          "joinedAt": "2026-08-09T02:01:06.428060Z"
+        }
+      ],
+      "currentGame": "multiplayerWordChain"
+    },
+    "FUKMR": {
+      "code": "FUKMR",
+      "createdAt": "2026-08-09T02:04:07.962860Z",
+      "updatedAt": "2026-08-09T02:04:23.312541Z",
+      "hostName": "steven",
+      "hostEmail": "hh",
+      "teams": [
+        {
+          "name": "Team A"
+        },
+        {
+          "name": "Team B"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [
+        {
+          "id": "7pcpwd1s22",
+          "name": "steven",
+          "email": "hh",
+          "team": "Team A",
+          "role": "leader",
+          "joinedAt": "2026-08-09T02:04:07.962860Z"
+        }
+      ],
+      "currentGame": "multiplayerWordChain"
+    },
+    "DBABK": {
+      "code": "DBABK",
+      "createdAt": "2026-08-09T02:31:16.704061Z",
+      "updatedAt": "2026-08-09T02:32:05.381624Z",
+      "hostName": "steve",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A"
+        },
+        {
+          "name": "Team B"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "anagram",
+        "wordBuilder"
+      ],
+      "players": [
+        {
+          "id": "jvmhyzh1ml",
+          "name": "steve",
+          "team": "Team A",
+          "role": "leader",
+          "joinedAt": "2026-08-09T02:31:16.704061Z"
+        },
+        {
+          "id": "tm1b30nhk5",
+          "name": "Steven ",
+          "team": "Team A",
+          "role": "",
+          "joinedAt": "2026-08-09T02:32:05.381624Z"
+        }
+      ],
+      "currentGame": null
+    },
+    "R8DN8": {
+      "code": "R8DN8",
+      "createdAt": "2026-08-09T02:52:02.134746Z",
+      "updatedAt": "2026-08-09T02:54:52.236366Z",
+      "hostName": "sd",
+      "hostId": "hfj7kxfkf5",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A"
+        },
+        {
+          "name": "Team B"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [
+        {
+          "id": "hfj7kxfkf5",
+          "name": "sd",
+          "team": "",
+          "role": "host",
+          "joinedAt": "2026-08-09T02:52:02.134746Z"
+        },
+        {
+          "id": "tplotklyin",
+          "name": "Stev",
+          "team": "Team A",
+          "role": "",
+          "joinedAt": "2026-08-09T02:53:27.362083Z"
+        },
+        {
+          "id": "p397x3883w",
+          "name": "re",
+          "team": "Team A",
+          "role": "",
+          "joinedAt": "2026-08-09T02:54:38.929315Z"
+        }
+      ],
+      "currentGame": "wordChain"
+    },
+    "93STR": {
+      "code": "93STR",
+      "createdAt": "2026-08-09T03:17:30.667255Z",
+      "updatedAt": "2026-08-09T03:19:23.986755Z",
+      "hostName": "d",
+      "hostId": "cuhwbyzk3u",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A"
+        },
+        {
+          "name": "Team B"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [
+        {
+          "id": "cuhwbyzk3u",
+          "name": "d",
+          "team": "",
+          "role": "host",
+          "joinedAt": "2026-08-09T03:17:30.667255Z"
+        },
+        {
+          "id": "wqv3366gum",
+          "name": "H",
+          "team": "Team A",
+          "role": "",
+          "joinedAt": "2026-08-09T03:18:45.871189Z"
+        },
+        {
+          "id": "ensw8kl68p",
+          "name": "gg",
+          "team": "Team A",
+          "role": "",
+          "joinedAt": "2026-08-09T03:19:23.986755Z"
+        }
+      ],
+      "currentGame": null,
+      "gameStarted": false,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      }
+    },
+    "JTDR3": {
+      "code": "JTDR3",
+      "createdAt": "2026-08-10T23:57:58.839203Z",
+      "updatedAt": "2026-08-10T23:58:17.313713Z",
+      "hostName": "Host",
+      "hostId": "r8ng10wubc",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": null
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [],
+      "status": "lobby",
+      "currentGame": "alphabetRace",
+      "gameMode": "turnBased",
+      "activeTeam": null,
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "r8ng10wubc"
+    },
+    "NKZD8": {
+      "code": "NKZD8",
+      "createdAt": "2026-08-11T00:31:44.899930Z",
+      "updatedAt": "2026-08-11T00:34:00.050123Z",
+      "hostName": "Host",
+      "hostId": "gairgpn803",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "mwwy9zveo8"
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [
+        {
+          "id": "mwwy9zveo8",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T00:32:05.010322Z"
+        },
+        {
+          "id": "7puf9z4y1b",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": false,
+          "joinedAt": "2026-08-11T00:32:40.167595Z"
+        }
+      ],
+      "status": "lobby",
+      "currentGame": "alphabetRace",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "gairgpn803",
+      "gameInstance": {
+        "type": "alphabetRace",
+        "seed": 993734508,
+        "startedAt": "2026-08-11T00:33:30.353372Z",
+        "_solution": "APPLE",
+        "scrambled": "PPLAE",
+        "letters": "P P L A E",
+        "startWord": "APPLE",
+        "activeLetter": "A",
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    },
+    "UZB2Y": {
+      "code": "UZB2Y",
+      "createdAt": "2026-08-11T00:34:11.242061Z",
+      "updatedAt": "2026-08-11T00:39:39.880915Z",
+      "hostName": "Host",
+      "hostId": "2sqniwt6af",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "z0l9hik3i8"
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord"
+      ],
+      "players": [],
+      "status": "playing",
+      "currentGame": "wordChain",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "2sqniwt6af",
+      "gameInstance": {
+        "type": "wordChain",
+        "seed": 800935367,
+        "startedAt": "2026-08-11T00:34:43.818425Z",
+        "_solution": "APPLE",
+        "scrambled": "LAPEP",
+        "letters": "L A P E P",
+        "startWord": "APPLE",
+        "activeLetter": "A",
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    },
+    "QGCYR": {
+      "code": "QGCYR",
+      "createdAt": "2026-08-11T00:43:34.380459Z",
+      "updatedAt": "2026-08-11T00:44:05.419181Z",
+      "hostName": "Host",
+      "hostId": "0utwvj0w6o",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": null
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [],
+      "status": "playing",
+      "currentGame": "anagram",
+      "gameMode": "simultaneous",
+      "activeTeam": null,
+      "roundStartedAt": 1786409045.4191818,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "0utwvj0w6o",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "anagram",
+        "seed": 690190341,
+        "startedAt": "2026-08-11T00:44:05.415184Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "_solution": "KING",
+        "scrambled": "GNKI",
+        "roundSec": 90
+      }
+    },
+    "7GFA8": {
+      "code": "7GFA8",
+      "createdAt": "2026-08-11T00:45:11.016654Z",
+      "updatedAt": "2026-08-11T00:46:25.421118Z",
+      "hostName": "Host",
+      "hostId": "ksrvs5841f",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "l1vo8n9xri"
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "l1vo8n9xri",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T00:45:23.503801Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "anagram",
+      "gameMode": "simultaneous",
+      "activeTeam": null,
+      "roundStartedAt": 1786409162.0397124,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "ksrvs5841f",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "anagram",
+        "seed": 943368002,
+        "startedAt": "2026-08-11T00:46:02.037712Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "_solution": "SWORD",
+        "scrambled": "OSDWR",
+        "roundSec": 90
+      }
+    },
+    "TZCSJ": {
+      "code": "TZCSJ",
+      "createdAt": "2026-08-11T01:01:10.154330Z",
+      "updatedAt": "2026-08-11T01:03:11.967248Z",
+      "hostName": "Host",
+      "hostId": "vmovm3uuwq",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "2ntd156mhj"
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "2ntd156mhj",
+          "name": "Seraphin",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:01:45.783792Z"
+        },
+        {
+          "id": "u2gat183vc",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": true,
+          "joinedAt": "2026-08-11T01:01:47.550039Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "anagram",
+      "gameMode": "simultaneous",
+      "activeTeam": null,
+      "roundStartedAt": 1786410128.6887443,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "vmovm3uuwq",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "anagram",
+        "seed": 162962664,
+        "startedAt": "2026-08-11T01:02:08.684748Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "_solution": "FATHER",
+        "scrambled": "THFERA",
+        "roundSec": 90
+      }
+    },
+    "QXJNK": {
+      "code": "QXJNK",
+      "createdAt": "2026-08-11T01:37:00.432253Z",
+      "updatedAt": "2026-08-11T01:39:26.560755Z",
+      "hostName": "Host",
+      "hostId": "48z4z10qoy",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "01c1ds0xq6"
+        },
+        {
+          "name": "Team B",
+          "captainId": "vbmxgzz3r4"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "01c1ds0xq6",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:37:26.861701Z"
+        },
+        {
+          "id": "vbmxgzz3r4",
+          "name": "Seraphin",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:38:00.893291Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "irregular",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "48z4z10qoy",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "irregular",
+        "seed": 1157862472,
+        "startedAt": "2026-08-11T01:39:01.858726Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "verb": "Eat",
+        "_solution": "ate",
+        "fr": "Manger",
+        "targetForm": "Past Simple"
+      }
+    },
+    "VRG92": {
+      "code": "VRG92",
+      "createdAt": "2026-08-11T01:46:24.055913Z",
+      "updatedAt": "2026-08-11T01:49:44.652331Z",
+      "hostName": "Host",
+      "hostId": "fyy4dncmcs",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "0k9jydcdwy"
+        },
+        {
+          "name": "Team B",
+          "captainId": "19mklm9d69"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "0k9jydcdwy",
+          "name": "Seraphin",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:47:22.588894Z"
+        },
+        {
+          "id": "19mklm9d69",
+          "name": "Stevez",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:47:38.108890Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "mysteryObject",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "fyy4dncmcs",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "mysteryObject",
+        "seed": 918560392,
+        "startedAt": "2026-08-11T01:48:40.352240Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "word": "Bicycle",
+        "_solution": "Bicycle",
+        "emoji": "🚲",
+        "clue": "Two-wheeled vehicle propelled by pedals.",
+        "fr": "Vélo / Bicyclette",
+        "roundSec": 90
+      }
+    },
+    "QBCAJ": {
+      "code": "QBCAJ",
+      "createdAt": "2026-08-11T01:51:19.553435Z",
+      "updatedAt": "2026-08-11T01:54:25.113258Z",
+      "hostName": "Host",
+      "hostId": "txsf19d1fp",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "533pwpoyqq"
+        },
+        {
+          "name": "Team B",
+          "captainId": "0ohrm2mplu"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "533pwpoyqq",
+          "name": "Seraphin",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:52:08.990970Z"
+        },
+        {
+          "id": "0ohrm2mplu",
+          "name": "Steven",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:52:21.736421Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "alphabetRace",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "txsf19d1fp",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "alphabetRace",
+        "seed": 267350117,
+        "startedAt": "2026-08-11T01:53:43.961662Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "roundSec": 90,
+        "minLength": 3
+      }
+    },
+    "H4FF3": {
+      "code": "H4FF3",
+      "createdAt": "2026-08-11T01:58:06.194766Z",
+      "updatedAt": "2026-08-11T02:03:04.153987Z",
+      "hostName": "Host",
+      "hostId": "8s51pmdqgv",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "od7c31wp5z"
+        },
+        {
+          "name": "Team B",
+          "captainId": "lu6yojy3ep"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "od7c31wp5z",
+          "name": "Seraphin",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:59:03.129268Z"
+        },
+        {
+          "id": "s0yrbae35x",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": false,
+          "joinedAt": "2026-08-11T01:59:06.939711Z"
+        },
+        {
+          "id": "rhbwh01i42",
+          "name": "Solve",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": true,
+          "joinedAt": "2026-08-11T01:59:46.698776Z"
+        },
+        {
+          "id": "lu6yojy3ep",
+          "name": "Roof",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-11T02:00:19.018486Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "wordBuilder",
+      "gameMode": "simultaneous",
+      "activeTeam": null,
+      "roundStartedAt": 1786413721.5831995,
+      "teamScores": {
+        "Team A": 121,
+        "Team B": 166
+      },
+      "hostSocketPlayerId": "8s51pmdqgv",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 26
+      },
+      "gameInstance": {
+        "type": "wordBuilder",
+        "seed": 1533361412,
+        "startedAt": "2026-08-11T02:02:01.582200Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 26
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "letters": "E S M T L A A F Y I R",
+        "poolSize": 26,
+        "roundSec": 90
+      }
+    },
+    "FZFF4": {
+      "code": "FZFF4",
+      "createdAt": "2026-08-11T02:30:20.867188Z",
+      "updatedAt": "2026-08-11T02:35:09.406972Z",
+      "hostName": "Host",
+      "hostId": "aig91yn407",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "50bdyo1tb4"
+        },
+        {
+          "name": "Team B",
+          "captainId": "juoye5k1kq"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "50bdyo1tb4",
+          "name": "Seraphin",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": true,
+          "joinedAt": "2026-08-11T02:31:17.641838Z"
+        },
+        {
+          "id": "juoye5k1kq",
+          "name": "Steven",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": true,
+          "joinedAt": "2026-08-11T02:32:13.854821Z"
+        }
+      ],
+      "status": "lobby",
+      "currentGame": null,
+      "gameMode": null,
+      "activeTeam": null,
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 74,
+        "Team B": 27
+      },
+      "hostSocketPlayerId": "aig91yn407",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      }
+    },
+    "PX4YV": {
+      "code": "PX4YV",
+      "createdAt": "2026-08-12T00:52:10.794887Z",
+      "updatedAt": "2026-08-12T00:58:09.535896Z",
+      "hostName": "steven",
+      "hostId": "fzdqcivwst",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "fzdqcivwst"
+        },
+        {
+          "name": "Team B",
+          "captainId": "mppc4owzfl"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [
+        {
+          "id": "fzdqcivwst",
+          "name": "steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-12T00:55:00.905282Z",
+          "score": 60,
+          "correctCount": 1
+        },
+        {
+          "id": "mppc4owzfl",
+          "name": "seraphienne",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "joinedAt": "2026-08-12T00:55:42.631666Z",
+          "score": 0
+        }
+      ],
+      "status": "lobby",
+      "currentGame": null,
+      "gameMode": null,
+      "activeTeam": null,
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 60,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "12hc9k2bm0",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      }
+    },
+    "8U6N9": {
+      "code": "8U6N9",
+      "createdAt": "2026-08-12T19:29:54.432505Z",
+      "updatedAt": "2026-08-12T19:29:54.432505Z",
+      "hostName": "Host",
+      "hostId": "8x1kpqr22q",
+      "teamCount": 3,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": null
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        },
+        {
+          "name": "Team C",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal"
+      ],
+      "players": [],
+      "status": "lobby",
+      "currentGame": null,
+      "gameMode": null,
+      "activeTeam": null,
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0,
+        "Team C": 0
+      },
+      "hostSocketPlayerId": "8x1kpqr22q"
+    },
+    "JP76K": {
+      "code": "JP76K",
+      "createdAt": "2026-08-13T18:28:13.306632Z",
+      "updatedAt": "2026-08-13T18:36:50.674112Z",
+      "hostName": "Host",
+      "hostId": "2y7spkr76r",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "gj2r68fgtz"
+        },
+        {
+          "name": "Team B",
+          "captainId": "vl1fcjnd5r"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal",
+        "tvVocab"
+      ],
+      "players": [
+        {
+          "id": "f214y9wg52",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": true,
+          "score": 0,
+          "correctCount": 0,
+          "joinedAt": "2026-08-13T18:33:54.239896Z"
+        },
+        {
+          "id": "vl1fcjnd5r",
+          "name": "Stevens",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "score": 0,
+          "correctCount": 0,
+          "joinedAt": "2026-08-13T18:34:32.057320Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "phrasal",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 80,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "2y7spkr76r",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "phrasal",
+        "seed": 551212301,
+        "startedAt": "2026-08-13T18:36:13.871798Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "verb": "turn on",
+        "options": [
+          "Start a device",
+          "Rotate fast",
+          "Walk away"
+        ],
+        "_solution": "Start a device",
+        "fr": "Allumer",
+        "usedWords": [
+          "start a device"
+        ],
+        "seenWords": []
+      }
+    },
+    "GJ64A": {
+      "code": "GJ64A",
+      "createdAt": "2026-08-13T18:42:14.540789Z",
+      "updatedAt": "2026-08-13T18:45:27.576892Z",
+      "hostName": "Steven",
+      "hostId": "he7tvh3xtm",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "he7tvh3xtm"
+        },
+        {
+          "name": "Team B",
+          "captainId": "hfldsuflhq"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal",
+        "tvVocab"
+      ],
+      "players": [
+        {
+          "id": "he7tvh3xtm",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "score": 55,
+          "correctCount": 2,
+          "joinedAt": "2026-08-13T18:43:04.707726Z"
+        },
+        {
+          "id": "hfldsuflhq",
+          "name": "Seraph",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": true,
+          "score": 60,
+          "correctCount": 2,
+          "joinedAt": "2026-08-13T18:43:34.668335Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "alphabetRace",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 55,
+        "Team B": 60
+      },
+      "hostSocketPlayerId": "crolj0ul2q",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "alphabetRace",
+        "seed": 1844010956,
+        "startedAt": "2026-08-13T18:43:53.092977Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "roundSec": 90,
+        "minLength": 3,
+        "usedWords": [
+          "art",
+          "arch",
+          "apple",
+          "and"
+        ],
+        "seenWords": []
+      }
+    },
+    "3BPJ5": {
+      "code": "3BPJ5",
+      "createdAt": "2026-08-13T19:02:14.531374Z",
+      "updatedAt": "2026-08-13T19:23:19.000803Z",
+      "hostName": "Host",
+      "hostId": "2zefupn1h0",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "z27c0406rn"
+        },
+        {
+          "name": "Team B",
+          "captainId": "y1idmllpy0"
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal",
+        "tvVocab"
+      ],
+      "players": [
+        {
+          "id": "z27c0406rn",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "score": 135,
+          "correctCount": 5,
+          "joinedAt": "2026-08-13T19:03:33.123690Z"
+        },
+        {
+          "id": "y1idmllpy0",
+          "name": "Sera",
+          "team": "Team B",
+          "isCaptain": true,
+          "connected": false,
+          "score": 0,
+          "correctCount": 0,
+          "joinedAt": "2026-08-13T19:04:10.228850Z"
+        },
+        {
+          "id": "q3ns0labv0",
+          "name": "Rice",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": false,
+          "score": 30,
+          "correctCount": 1,
+          "joinedAt": "2026-08-13T19:09:45.907718Z"
+        },
+        {
+          "id": "yhkmnbpmyo",
+          "name": "Rde",
+          "team": "Team B",
+          "isCaptain": false,
+          "connected": false,
+          "score": 40,
+          "correctCount": 1,
+          "joinedAt": "2026-08-13T19:10:09.824971Z"
+        },
+        {
+          "id": "s6d234i5z9",
+          "name": "Ruei",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": false,
+          "score": 110,
+          "correctCount": 3,
+          "joinedAt": "2026-08-13T19:17:57.924005Z"
+        },
+        {
+          "id": "w1gwjhnnkv",
+          "name": "Fgjj",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": true,
+          "score": 25,
+          "correctCount": 1,
+          "joinedAt": "2026-08-13T19:23:02.938133Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "irregular",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 300,
+        "Team B": 40
+      },
+      "hostSocketPlayerId": "2zefupn1h0",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "irregular",
+        "seed": 1764446055,
+        "startedAt": "2026-08-13T19:23:11.371202Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "verb": "Eat",
+        "_solution": "ate",
+        "fr": "Manger",
+        "targetForm": "Past Simple",
+        "usedWords": [
+          "ate"
+        ],
+        "seenWords": []
+      }
+    },
+    "KSDQ2": {
+      "code": "KSDQ2",
+      "createdAt": "2026-08-13T20:16:22.083654Z",
+      "updatedAt": "2026-08-13T20:28:02.432672Z",
+      "hostName": "Host",
+      "hostId": "1waiw6yrlb",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "kkg99p5wsz"
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal",
+        "tvVocab"
+      ],
+      "players": [
+        {
+          "id": "kkg99p5wsz",
+          "name": "Stevre",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "score": 100,
+          "correctCount": 3,
+          "joinedAt": "2026-08-13T20:16:57.904923Z"
+        },
+        {
+          "id": "mnzwe2s4kn",
+          "name": "Gge",
+          "team": "Team A",
+          "isCaptain": false,
+          "connected": true,
+          "score": 732,
+          "correctCount": 12,
+          "joinedAt": "2026-08-13T20:22:10.297470Z"
+        }
+      ],
+      "status": "playing",
+      "currentGame": "spellingBee",
+      "gameMode": "turnBased",
+      "activeTeam": "Team A",
+      "roundStartedAt": 1786652882.4326725,
+      "teamScores": {
+        "Team A": 832,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "1waiw6yrlb",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      },
+      "gameInstance": {
+        "type": "spellingBee",
+        "seed": 1259604479,
+        "startedAt": "2026-08-13T20:27:39.777450Z",
+        "opts": {
+          "roundSec": 90,
+          "minLength": 3,
+          "wordSec": 20,
+          "wordsPerTurn": 5,
+          "turnSec": 60,
+          "poolSize": 22
+        },
+        "alphabet": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "_solution": "APPLE",
+        "word": "APPLE",
+        "frHint": "Spell out loud or type the English word.",
+        "wordsPerTurn": 5,
+        "wordSec": 20,
+        "usedWords": [],
+        "seenWords": [
+          "planet",
+          "apple",
+          "summer",
+          "garden"
+        ]
+      }
+    },
+    "59MEY": {
+      "code": "59MEY",
+      "createdAt": "2026-08-13T22:35:12.889590Z",
+      "updatedAt": "2026-08-13T22:46:14.967175Z",
+      "hostName": "Host",
+      "hostId": "fguvja2gd6",
+      "teamCount": 2,
+      "teams": [
+        {
+          "name": "Team A",
+          "captainId": "vwjfticao7"
+        },
+        {
+          "name": "Team B",
+          "captainId": null
+        }
+      ],
+      "allowedGames": [
+        "wordChain",
+        "alphabetRace",
+        "anagram",
+        "spellingBee",
+        "wordBuilder",
+        "wordFromWord",
+        "mysteryObject",
+        "grammar",
+        "irregular",
+        "phrasal",
+        "tvVocab"
+      ],
+      "players": [
+        {
+          "id": "vwjfticao7",
+          "name": "Steven",
+          "team": "Team A",
+          "isCaptain": true,
+          "connected": false,
+          "score": 0,
+          "correctCount": 0,
+          "joinedAt": "2026-08-13T22:35:51.452974Z"
+        }
+      ],
+      "status": "lobby",
+      "currentGame": null,
+      "gameMode": null,
+      "activeTeam": null,
+      "roundStartedAt": null,
+      "teamScores": {
+        "Team A": 0,
+        "Team B": 0
+      },
+      "hostSocketPlayerId": "fguvja2gd6",
+      "gameOpts": {
+        "roundSec": 90,
+        "minLength": 3,
+        "wordSec": 20,
+        "wordsPerTurn": 5,
+        "turnSec": 60,
+        "poolSize": 22
+      }
+    }
+  }
+}
