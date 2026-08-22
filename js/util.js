@@ -322,6 +322,21 @@ CAA.util = (function () {
         }
         return item;
       },
+      // Infinite draw: cycles through the pool endlessly (reshuffles when exhausted)
+      drawInfinite() {
+        if (deckItems.length === 0) {
+          // Reset and reshuffle the full pool for a new cycle
+          drawnIds.length = 0;
+          deckItems = shuffle(origPool.slice());
+          cycle++;
+        }
+        let item = deckItems.shift();
+        if (!item && origPool.length > 0) {
+          deckItems = shuffle(origPool.slice());
+          item = deckItems.shift();
+        }
+        return item || null;
+      },
       remaining() {
         return deckItems.length;
       },
