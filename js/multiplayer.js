@@ -512,8 +512,34 @@ CAA.multiplayer = (function () {
     let fetchedTeams = ['Team A', 'Team B', 'Team C'];
     let selectedTeam = fetchedTeams[0];  // toujours initialisé, jamais vide
     let userSelectedTeam = false; // si vrai, ne pas écraser la sélection lors des fetch
-    let currentScr = null;
+    let teamSelectEl = null; // référence directe au <select>
+    let teamSizesEl = null;  // référence directe au bloc info équipes
     let lastFetchedRoom = null;
+
+    function updateTeamSelect() {
+      if (!teamSelectEl) return;
+      // Préserver la valeur choisie si toujours disponible
+      if (!fetchedTeams.includes(selectedTeam)) {
+        selectedTeam = fetchedTeams[0];
+        userSelectedTeam = false;
+      }
+      teamSelectEl.innerHTML = '';
+      const h = U().h;
+      fetchedTeams.forEach((t) => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        if (t === selectedTeam) opt.selected = true;
+        teamSelectEl.appendChild(opt);
+      });
+      // Mettre à jour aussi les tailles d'équipes
+      if (teamSizesEl && Array.isArray(fetchedTeams) && fetchedTeams.length) {
+        const counts = {};
+        ((lastFetchedRoom && lastFetchedRoom.playerScores) || []).forEach((ps) => { counts[ps.team] = (counts[ps.team] || 0) + 1; });
+        const sizes = fetchedTeams.map((t) => `${t} (${counts[t] || 0} player${(counts[t] || 0) !== 1 ? 's' : ''})`).join(' · ');
+        teamSizesEl.textContent = 'Members: ' + sizes;
+      }
+    }
 
     function fetchTeamsForCode(code) {
       if (code && code.length >= 4) {
@@ -521,22 +547,13 @@ CAA.multiplayer = (function () {
           .then((res) => res.json())
           .then((data) => {
             if (data && data.teams && data.teams.length) {
-                lastFetchedRoom = data;
-                const newTeams = data.teams.map((t) => t.name);
-                fetchedTeams = newTeams;
-                // only override selectedTeam if the user didn't manually pick one
-                if (!userSelectedTeam) {
-                  if (!fetchedTeams.includes(selectedTeam)) {
-                    selectedTeam = fetchedTeams[0];
-                  }
-                } else {
-                  // if user selected a team that's no longer present, fallback
-                  if (!fetchedTeams.includes(selectedTeam)) {
-                    selectedTeam = fetchedTeams[0];
-                    userSelectedTeam = false;
-                  }
-                }
-              if (currentScr) render(currentScr);
+              lastFetchedRoom = data;
+              fetchedTeams = data.teams.map((t) => t.name);
+              if (!userSelectedTeam || !fetchedTeams.includes(selectedTeam)) {
+                selectedTeam = fetchedTeams[0];
+                userSelectedTeam = false;
+              }
+              updateTeamSelect(); // Mise à jour partielle — pas de re-render complet
             }
           })
           .catch(() => { });
@@ -544,7 +561,6 @@ CAA.multiplayer = (function () {
     }
 
     function render(scr) {
-      currentScr = scr;
       const h = U().h;
       scr.innerHTML = '';
 
@@ -552,6 +568,11 @@ CAA.multiplayer = (function () {
       scr.appendChild(h('p', { class: 'section-sub' }, ['Enter the room code, your name, and choose your team.']));
 
       const card = h('div', { class: 'gd-question mt-lg', style: 'text-align:left;' });
+
+      // Build the team <select> element and keep a reference
+      teamSelectEl = h('select', {
+        onchange: (e) => { selectedTeam = e.target.value; userSelectedTeam = true; }
+      }, fetchedTeams.map((t) => h('option', { value: t, selected: t === selectedTeam }, [t])));
 
       const form = h('div', { class: 'form-grid' }, [
         h('label', {}, ['Room Code (5 characters)', h('input', {
@@ -570,21 +591,20 @@ CAA.multiplayer = (function () {
           placeholder: 'Enter your name...',
           oninput: (e) => { name = e.target.value; }
         })]),
-        h('label', { style: 'grid-column: 1 / -1;' }, ['Choose Your Team', h('select', {
-          onchange: (e) => { selectedTeam = e.target.value; userSelectedTeam = true; }
-        }, fetchedTeams.map((t) => h('option', { value: t, selected: t === selectedTeam }, [t])))])
+        h('label', { style: 'grid-column: 1 / -1;' }, ['Choose Your Team', teamSelectEl])
       ]);
 
       card.appendChild(form);
-      // show team sizes next to select
-      const teamSizes = h('div', { class: 'section-note mt', style: 'font-size:0.95rem;opacity:0.9;' });
+
+      // Bloc taille des équipes (mise à jour partielle possible)
+      teamSizesEl = h('div', { class: 'section-note mt', style: 'font-size:0.95rem;opacity:0.9;' });
       if (Array.isArray(fetchedTeams) && fetchedTeams.length) {
         const counts = {};
-        (lastFetchedRoom && lastFetchedRoom.playerScores || []).forEach((ps) => { counts[ps.team] = (counts[ps.team] || 0) + 1; });
-        const sizes = fetchedTeams.map((t) => `${t} (${counts[t] || 0})`).join(' · ');
-        teamSizes.textContent = 'Team members: ' + sizes;
+        ((lastFetchedRoom && lastFetchedRoom.playerScores) || []).forEach((ps) => { counts[ps.team] = (counts[ps.team] || 0) + 1; });
+        const sizes = fetchedTeams.map((t) => `${t} (${counts[t] || 0} player${(counts[t] || 0) !== 1 ? 's' : ''})`).join(' · ');
+        teamSizesEl.textContent = 'Members: ' + sizes;
       }
-      card.appendChild(teamSizes);
+      card.appendChild(teamSizesEl);
       scr.appendChild(card);
 
       scr.appendChild(h('div', { class: 'row center mt-lg' }, [
