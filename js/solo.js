@@ -7,7 +7,7 @@ window.CAA = window.CAA || {};
 CAA.solo = (function () {
   const U = () => CAA.util;
   const C = () => CAA.content;
-  const ROUND = 10; // questions per round
+  // No fixed ROUND limit — all games are now infinite (play until tired!)
   const ANA_TIME = 60;     // solo anagram : durée de la manche (s)
   const ANA_PENALTY = 5;   // secondes perdues par mauvaise réponse
   const ANA_MAX_PASS = 3;  // nombre de « pass » autorisés
@@ -28,8 +28,9 @@ CAA.solo = (function () {
         h("span", { class: "level-badge " + tierObj.cls }, [tierObj.label])
       ]),
       h("div", { class: "row", style: "gap:14px;align-items:center;" }, [
-        h("span", {}, ["Question: ", h("b", {}, [String(currentIdx + 1), " / ", String(ROUND)])]),
+        h("span", {}, ["Question: ", h("b", {}, [String(currentIdx + 1)])]),
         h("span", {}, ["Score: ", h("b", { class: "pts" }, [String(score), " pts"])])
+
       ])
     ]);
     scr.appendChild(hud);
@@ -142,19 +143,25 @@ CAA.solo = (function () {
     U().confetti(1800);
     U().show((scr) => {
       const h = U().h;
-      const pct = Math.round((score / Math.max(1, total)) * 100);
+      // In infinite mode total === questions answered (i), ratio may be > 1 — use score directly
+      const pct = total > 0 ? Math.round((score / Math.max(1, total)) * 100) : 0;
+      const emoji = pct >= 80 ? "🌟" : pct >= 50 ? "👍" : score >= 10 ? "🎉" : "💪";
+      const summary = total > 0
+        ? `${score} correct out of ${total} answered`
+        : `${score} pts`;
       scr.appendChild(h("div", { class: "play-card solo-play-card" }, [
-        h("div", { class: "prompt-emoji" }, [pct >= 80 ? "🌟" : pct >= 50 ? "👍" : "💪"]),
-        h("h2", { class: "section-title" }, ["Round complete!"]),
+        h("div", { class: "prompt-emoji" }, [emoji]),
+        h("h2", { class: "section-title" }, ["Session complete!"]),
         h("p", { class: "section-sub" }, [title]),
-        h("div", { class: "prompt-word" }, [`${score} / ${total}`]),
+        h("div", { class: "prompt-word" }, [summary]),
         h("div", { class: "row center mt-lg" }, [
-          h("button", { class: "btn btn-primary", onclick: again }, ["Play again"]),
+          h("button", { class: "btn btn-primary", onclick: again }, ["▶ Play again"]),
           h("button", { class: "btn btn-ghost", onclick: menu }, ["Other games"])
         ])
       ]));
     }, { replace: true });
   }
+
 
   /* =================================================================
      GAME 1 — Word Match
@@ -176,21 +183,14 @@ CAA.solo = (function () {
       });
       if (filtered.length >= 4) vocab = filtered;
     }
+    if (!vocab.length) { U().alertBox("No vocabulary words available for this tier!"); return; }
 
     const deck = U().newSessionDeck(vocab, "solo_wordMatch_" + tier);
-    const pool = deck.draw(Math.min(ROUND, vocab.length)) || [];
-    if (!pool.length) {
-      U().alertBox("No vocabulary words available for this tier!");
-      return;
-    }
     let i = 0, score = 0;
 
     function question() {
-      const item = pool[i];
-      if (!item) {
-        roundEnd("Word Match", score, i, () => startWordMatch(tier));
-        return;
-      }
+      const item = deck.drawInfinite();
+      if (!item) { roundEnd("Word Match", score, i, () => startWordMatch(tier)); return; }
       const distractors = U().pickDistractors(vocab, item, 3, (w) => w.en);
       const options = U().shuffle([item].concat(distractors));
 
@@ -211,6 +211,10 @@ CAA.solo = (function () {
         card.appendChild(optWrap);
         const fb = h("div", { class: "feedback" });
         card.appendChild(fb);
+        // Stop button
+        card.appendChild(h("div", { class: "row center mt-lg" }, [
+          h("button", { class: "btn btn-ghost", onclick: () => roundEnd("Word Match", score, i, () => startWordMatch(tier)) }, ["⏹ Stop & see score"])
+        ]));
         scr.appendChild(card);
 
         function choose(chosen, btn) {
@@ -235,11 +239,7 @@ CAA.solo = (function () {
       }, { replace: i > 0 });
     }
 
-    function next() {
-      i++;
-      if (i < pool.length) question();
-      else roundEnd("Word Match", score, pool.length, () => startWordMatch(tier));
-    }
+    function next() { i++; question(); }
     question();
   }
 
@@ -260,21 +260,14 @@ CAA.solo = (function () {
       const filtered = fullPool.filter((w) => (w.tier || "medium") === tier);
       if (filtered.length >= 4) fullPool = filtered;
     }
+    if (!fullPool.length) { U().alertBox("No spelling words available for this tier!"); return; }
 
     const deck = U().newSessionDeck(fullPool, "solo_spelling_" + tier);
-    const pool = deck.draw(Math.min(ROUND, fullPool.length)) || [];
-    if (!pool.length) {
-      U().alertBox("No spelling words available for this tier!");
-      return;
-    }
     let i = 0, score = 0;
 
     function question() {
-      const item = pool[i];
-      if (!item) {
-        roundEnd("Spelling Bee", score, i, () => startSpellingBee(tier));
-        return;
-      }
+      const item = deck.drawInfinite();
+      if (!item) { roundEnd("Spelling Bee", score, i, () => startSpellingBee(tier)); return; }
       const target = (typeof item === 'string' ? item : (item.word || item.en || "")).trim();
 
       U().show((scr) => {
@@ -326,6 +319,9 @@ CAA.solo = (function () {
 
         const fb = h("div", { class: "feedback mt" });
         card.appendChild(fb);
+        card.appendChild(h("div", { class: "row center mt-lg" }, [
+          h("button", { class: "btn btn-ghost", onclick: () => roundEnd("Spelling Bee", score, i, () => startSpellingBee(tier)) }, ["⏹ Stop & see score"])
+        ]));
         scr.appendChild(card);
 
         setTimeout(() => U().speak(target), 300);
@@ -359,11 +355,7 @@ CAA.solo = (function () {
       }, { replace: i > 0 });
     }
 
-    function next() {
-      i++;
-      if (i < pool.length) question();
-      else roundEnd("Spelling Bee", score, pool.length, () => startSpellingBee(tier));
-    }
+    function next() { i++; question(); }
     question();
   }
 
@@ -411,12 +403,14 @@ CAA.solo = (function () {
       if (filtered.length >= 3) pool = filtered;
     }
     const deck = U().newSessionDeck(pool, "solo_pronounce_" + (tier || "all"));
-    const items = deck.draw(Math.min(ROUND, pool.length));
     let i = 0, score = 0;
     const canListen = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+    let currentItem = null;
 
     function question() {
-      const item = items[i];
+      const item = deck.drawInfinite();
+      if (!item) { roundEnd("Pronunciation Drill", score, i, pronunciationDrill); return; }
+      currentItem = item;
       let isVerified = false;
 
       U().show((scr) => {
@@ -499,6 +493,9 @@ CAA.solo = (function () {
 
         const initialActions = h("div", { class: "row center mt-md" }, [verifyBtn, micBtn]);
         card.appendChild(initialActions);
+        card.appendChild(h("div", { class: "row center mt-lg" }, [
+          h("button", { class: "btn btn-ghost", onclick: () => roundEnd("Pronunciation Drill", score, i, pronunciationDrill) }, ["⏹ Stop & see score"])
+        ]));
 
         scr.appendChild(card);
 
@@ -571,11 +568,7 @@ CAA.solo = (function () {
       }, { replace: i > 0 });
     }
 
-    function next() {
-      i++;
-      if (i < items.length) question();
-      else roundEnd("Pronunciation Drill", score, items.length, pronunciationDrill);
-    }
+    function next() { i++; question(); }
 
     question();
   }
@@ -585,24 +578,13 @@ CAA.solo = (function () {
      ================================================================= */
   function fillBlank() {
     const grammar = C().grammar || [];
-    if (!grammar.length) {
-      U().alertBox("No grammar sentences available!");
-      return;
-    }
+    if (!grammar.length) { U().alertBox("No grammar sentences available!"); return; }
     const deck = U().newSessionDeck(grammar, "solo_fillBlank");
-    const pool = deck.draw(Math.min(ROUND, grammar.length)) || [];
-    if (!pool.length) {
-      U().alertBox("No grammar questions available!");
-      return;
-    }
     let i = 0, score = 0;
 
     function question() {
-      const item = pool[i];
-      if (!item) {
-        roundEnd("Fill in the Blank", score, i, fillBlank);
-        return;
-      }
+      const item = deck.drawInfinite();
+      if (!item) { roundEnd("Fill in the Blank", score, i, fillBlank); return; }
       const options = U().shuffle(item.options || []);
       U().show((scr) => {
         const h = U().h;
@@ -623,6 +605,9 @@ CAA.solo = (function () {
         card.appendChild(optWrap);
         const fb = h("div", { class: "feedback" });
         card.appendChild(fb);
+        card.appendChild(h("div", { class: "row center mt-lg" }, [
+          h("button", { class: "btn btn-ghost", onclick: () => roundEnd("Fill in the Blank", score, i, fillBlank) }, ["⏹ Stop & see score"])
+        ]));
         scr.appendChild(card);
 
         function choose(chosen, btn) {
@@ -656,11 +641,7 @@ CAA.solo = (function () {
       }, { replace: i > 0 });
     }
 
-    function next() {
-      i++;
-      if (i < pool.length) question();
-      else roundEnd("Fill in the Blank", score, pool.length, fillBlank);
-    }
+    function next() { i++; question(); }
     question();
   }
 
@@ -676,12 +657,6 @@ CAA.solo = (function () {
     }
 
     const deck = U().newSessionDeck(pool, "solo_irregular");
-    const sessionItems = deck.draw(Math.min(ROUND, pool.length)) || [];
-    if (!sessionItems.length) {
-      U().alertBox("No irregular verb questions available!");
-      return;
-    }
-
     let i = 0, score = 0;
 
     function normalize(text) {
@@ -709,11 +684,8 @@ CAA.solo = (function () {
     }
 
     function question() {
-      const item = sessionItems[i];
-      if (!item) {
-        roundEnd("Irregular Verbs", score, i, irregularVerbs);
-        return;
-      }
+      const item = deck.drawInfinite();
+      if (!item) { roundEnd("Irregular Verbs", score, i, irregularVerbs); return; }
 
       const type = pickQuestionType();
       let prompt = "";
@@ -770,6 +742,9 @@ CAA.solo = (function () {
           card.appendChild(input);
           card.appendChild(checkBtn);
         }
+        card.appendChild(h("div", { class: "row center mt-lg" }, [
+          h("button", { class: "btn btn-ghost", onclick: () => roundEnd("Irregular Verbs", score, i, irregularVerbs) }, ["⏹ Stop & see score"])
+        ]));
         scr.appendChild(card);
 
         function chooseForm(answer) {
@@ -812,11 +787,7 @@ CAA.solo = (function () {
       }, { replace: i > 0 });
     }
 
-    function next() {
-      i++;
-      if (i < sessionItems.length) question();
-      else roundEnd("Irregular Verbs", score, sessionItems.length, irregularVerbs);
-    }
+    function next() { i++; question(); }
 
     question();
   }
@@ -846,21 +817,13 @@ CAA.solo = (function () {
 
     function startGame() {
       const deck = U().newSessionDeck(pool, "solo_phrasal_" + lang);
-      const sessionItems = deck.draw(Math.min(ROUND, pool.length)) || [];
-      if (!sessionItems.length) {
-        U().alertBox("No phrasal verb questions available!");
-        return;
-      }
       let i = 0, score = 0;
       const field = lang === "fr" ? "fr" : "meaning";
       const langLabel = lang === "fr" ? "🇫🇷 French" : "🇬🇧 English";
 
       function question() {
-        const item = sessionItems[i];
-        if (!item) {
-          roundEnd("Phrasal Verbs (" + langLabel + ")", score, i, () => phrasalVerbs());
-          return;
-        }
+        const item = deck.drawInfinite();
+        if (!item) { roundEnd("Phrasal Verbs (" + langLabel + ")", score, i, () => phrasalVerbs()); return; }
         const correct = item[field];
         const distractors = pickDistractors(item, field, 3);
         const options = U().shuffle([correct].concat(distractors));
@@ -886,6 +849,9 @@ CAA.solo = (function () {
           card.appendChild(optWrap);
           const fb = h("div", { class: "feedback" });
           card.appendChild(fb);
+          card.appendChild(h("div", { class: "row center mt-lg" }, [
+            h("button", { class: "btn btn-ghost", onclick: () => roundEnd("Phrasal Verbs (" + langLabel + ")", score, i, () => phrasalVerbs()) }, ["⏹ Stop & see score"])
+          ]));
           scr.appendChild(card);
 
           function choose(chosen, btn) {
@@ -915,11 +881,7 @@ CAA.solo = (function () {
         }, { replace: i > 0 });
       }
 
-      function next() {
-        i++;
-        if (i < sessionItems.length) question();
-        else roundEnd("Phrasal Verbs (" + langLabel + ")", score, sessionItems.length, () => phrasalVerbs());
-      }
+      function next() { i++; question(); }
       question();
     }
 
@@ -1105,44 +1067,38 @@ CAA.solo = (function () {
       if (filtered.length >= 4) pool = filtered;
     }
 
+    if (!pool.length) { U().alertBox("No mystery object items available for this tier!"); return; }
     const deck = U().newSessionDeck(pool, "solo_mystery_" + tier);
-    const sessionItems = deck.draw(Math.min(ROUND, pool.length)) || [];
-    if (!sessionItems.length) {
-      U().alertBox("No mystery object items available for this tier!");
-      return;
-    }
-
     let idx = 0, score = 0;
 
-    function next() {
-      if (idx >= sessionItems.length) {
-        markProgress(score);
-        U().sfx.win();
-        U().confetti(1800);
-        U().show((scr) => {
-          const h = U().h;
-          scr.appendChild(h("div", { class: "play-card solo-play-card" }, [
-            h("div", { class: "prompt-emoji" }, ["🏆"]),
-            h("h2", { class: "section-title" }, ["Round finished!"]),
-            h("p", { class: "section-sub" }, ["Mystery Object Practice"]),
-            h("div", { class: "prompt-word" }, [String(score) + " / " + String(sessionItems.length * 10) + " pts"]),
-            h("div", { class: "row center mt-lg" }, [
-              h("button", { class: "btn btn-primary", onclick: () => startMysteryObject(tier) }, ["Play again"]),
-              h("button", { class: "btn btn-ghost", onclick: menu }, ["Other games"])
-            ])
-          ]));
-        }, { replace: true });
-        return;
-      }
+    function stopGame() {
+      markProgress(score);
+      U().sfx.win();
+      U().confetti(1800);
+      U().show((scr) => {
+        const h = U().h;
+        scr.appendChild(h("div", { class: "play-card solo-play-card" }, [
+          h("div", { class: "prompt-emoji" }, [score >= 50 ? "🌟" : score >= 20 ? "👍" : "💪"]),
+          h("h2", { class: "section-title" }, ["Session finished!"]),
+          h("p", { class: "section-sub" }, ["Mystery Object · " + idx + " objects guessed"]),
+          h("div", { class: "prompt-word" }, [String(score) + " pts"]),
+          h("div", { class: "row center mt-lg" }, [
+            h("button", { class: "btn btn-primary", onclick: () => startMysteryObject(tier) }, ["Play again"]),
+            h("button", { class: "btn btn-ghost", onclick: menu }, ["Other games"])
+          ])
+        ]));
+      }, { replace: true });
+    }
 
-      const item = sessionItems[idx];
-      if (!item) { idx++; next(); return; }
+    function next() {
+      const item = deck.drawInfinite();
+      if (!item) { stopGame(); return; }
       let hintUsed = false;
       let roundScore = 10;
 
       U().show((scr) => {
         const h = U().h;
-        header(scr, "🔍 Mystery Object", idx, score, tier);
+        header(scr, "🔍 Mystery Object", idx + 1, score, tier);
 
         const card = h("div", { class: "play-card solo-play-card obj-desc-card" });
         card.appendChild(h("div", { class: "topic-tag" }, ["Category: " + (item.cat || "Vocabulary")]));
@@ -1213,6 +1169,16 @@ CAA.solo = (function () {
             U().speak(item.en);
             setTimeout(() => { idx++; next(); }, 1800);
           }
+
+          function stopAndScore(btn) {
+            btn.disabled = true;
+            stopGame();
+          }
+
+          // Stop button for MCQ
+          card.appendChild(h("div", { class: "row center mt-lg" }, [
+            h("button", { class: "btn btn-ghost", id: "mystery-stop-btn", onclick: function() { stopGame(); } }, ["⏹ Stop & see score"])
+          ]));
         } else {
           // Direct Text Input with SQLite word validation check
           const input = h("input", {
@@ -1259,11 +1225,18 @@ CAA.solo = (function () {
             U().speak(item.en);
             card.appendChild(h("div", { class: "row center mt-lg" }, [
               h("button", { class: "speaker", onclick: () => U().speak(item.en) }, ["🔊"]),
-              h("button", { class: "btn btn-primary", onclick: () => { idx++; next(); } }, ["Next ➔"])
+              h("button", { class: "btn btn-primary", onclick: () => { idx++; next(); } }, ["Next ➔"]),
+              h("button", { class: "btn btn-ghost", onclick: stopGame }, ["⏹ Stop"])
             ]));
           }
         }
 
+        // Global stop button for text input mode
+        if (!card.querySelector("#mystery-stop-btn")) {
+          card.appendChild(h("div", { class: "row center mt-lg" }, [
+            h("button", { class: "btn btn-ghost", onclick: stopGame }, ["⏹ Stop & see score"])
+          ]));
+        }
         scr.appendChild(card);
       });
     }
